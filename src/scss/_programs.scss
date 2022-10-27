@@ -1,0 +1,279 @@
+@import "_variables";
+@import "_mixins";
+
+.programs {
+  width: 100%;
+  &__title {
+    margin-bottom: 45px;
+    @include text(38px, 46px, 600, $colorBlack);
+  }
+  &__search {
+    position: relative;
+    margin-bottom: 75px;
+  }
+  &__search-input {
+    padding-left: 32px;
+    width: 100%;
+    height: 37px;
+    @include text(14px, 17px, 500, $colorBlack);
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid $colorSearchBorder;
+    transition-property: border-bottom;
+    @include transition;
+  }
+  &__search-input::placeholder {
+    @include text(14px, 17px, 500, $colorPlaceholder);
+  }
+  &__search-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    @include svg-icon(24px, 24px, $colorPlaceholder);
+    transition-property: color;
+    @include transition;
+  }
+  &__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    margin-bottom: -15px;
+  }
+
+  &__thead th {
+    border-bottom: 22px solid transparent;
+  }
+  &__thead-th {
+    @include text(12px, 15px, 500, $colorPlaceholder);
+  }
+
+  &__tbody-tr {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    background-color: $colorWhite;
+    box-shadow: 0px 0px 30px rgba(238, 238, 238, 0.5);
+  }
+  &__tbody-tr td {
+    text-align: center;
+  }
+  &__tbody-tr a {
+    transition-property: opacity;
+    @include transition;
+  }
+  &__tbody-number {
+    @include text(16px, 19px, 600, $colorBlack);
+  }
+  &__tbody-program {
+    @include text(14px, 24px, 500, $colorBlack);
+  }
+  &__tbody-until {
+    @include text(14px, 17px, 500, $colorGrey);
+  }
+  &__tbody-until.active {
+    @include text(14px, 17px, 500, $colorRed);
+  }
+  &__download-svg {
+    @include svg-icon(32px, 32px, $colorGreen);
+  }
+  &__guide-svg {
+    @include svg-icon(22px, 32px, $colorBlue);
+  }
+  &__tbody-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__active-btn {
+    @include text(14px, 24px, 500, $colorGreen);
+  }
+  &__notactive-btn {
+    @include text(14px, 24px, 500, $colorSearchBorder);
+  }
+  &__activation {
+    background-color: rgba(42, 95, 203, 0.06);
+  }
+  &__activation-top {
+    padding-left: 26px;
+    position: relative;
+
+    overflow: hidden;
+  }
+  &__activation-top:after {
+    content: "";
+    position: absolute;
+    top: 22%;
+    right: 15%;
+    z-index: 1;
+    background-image: url("../img/activation-bg.png");
+
+    width: 287px;
+    height: 287px;
+    opacity: 0.2;
+  }
+  &__activation-title-cocntent {
+    padding-top: 50px;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  &__activation-title,
+  &__activation-span {
+    margin-right: 10px;
+    @include text(20px, 30px, 600, $colorBlack);
+  }
+  &__activation-descr {
+    margin-bottom: 30px;
+    @include text(14px, 28px, 400, $colorBlack);
+  }
+  &__activation-btn {
+    margin-bottom: 45px;
+    width: 194px;
+    height: 44px;
+    @include text(16px, 19px, 500, $colorWhite);
+    background-color: $colorBlue;
+    border: 1px solid $colorBlue;
+    border-radius: 50px;
+    transition-property: opacity;
+    @include transition;
+  }
+  &__activation-box {
+    padding: 30px 26px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $colorWhite;
+  }
+  &__activation-box:not(:last-child) {
+    border-bottom: 1px solid $colorActivationBottom;
+  }
+  &__box-left {
+    display: flex;
+    flex-direction: column;
+  }
+  &__box-spans {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  &__box-span-left {
+    margin-right: 5px;
+    @include text(14px, 24px, 500, $colorSpans);
+  }
+  &__box-span-right {
+    margin-right: 10px;
+    @include text(14px, 24px, 500, $colorBlack);
+  }
+  &__box-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__box-right-btn {
+    @include text(16px, 20px, 500, $colorBlue);
+    width: 189px;
+    height: 44px;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 1px solid $colorBlue;
+    transition-property: opacity, color, background-color;
+    @include transition;
+  }
+  &__box-span-svg {
+    @include svg-icon(20px, 20px, $colorBlue);
+    transition-property: opacity;
+    @include transition;
+  }
+  &__content-tippy-svg {
+    @include svg-icon(12px, 12px, $colorRed);
+  }
+  &__content-tippy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .programs {
+    &__search-input:hover {
+      border-bottom: 1px solid $colorBlue;
+    }
+    &__search-input:hover + &__search-svg {
+      @include svg-icon(24px, 24px, $colorBlue);
+    }
+    &__tbody-tr a:hover {
+      opacity: 0.5;
+    }
+    &__activation-btn:hover {
+      opacity: 0.5;
+    }
+    &__box-right-btn:hover {
+      color: $colorWhite;
+      background-color: $colorBlue;
+      opacity: 0.5;
+    }
+    &__box-span-svg:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+//active, focus
+.programs {
+  &__search-input:active {
+    border-bottom: 1px solid $colorBlue;
+  }
+  &__search-input:active + &__search-svg {
+    @include svg-icon(24px, 24px, $colorBlue);
+  }
+  &__search-input:focus {
+    border-bottom: 1px solid $colorBlue;
+    outline: none;
+  }
+  &__search-input:focus + &__search-svg {
+    @include svg-icon(24px, 24px, $colorBlue);
+  }
+  &__activation-btn:active {
+    opacity: 0.5;
+  }
+  &__activation-btn:focus {
+    opacity: 0.5;
+    outline: none;
+  }
+  &__box-right-btn:active {
+    color: $colorWhite;
+    background-color: $colorBlue;
+    opacity: 0.5;
+  }
+  &__box-right-btn:focus {
+    color: $colorWhite;
+    background-color: $colorBlue;
+    opacity: 0.5;
+    outline: none;
+  }
+  &__box-span-svg:active {
+    opacity: 0.5;
+  }
+  &__box-tippy:focus {
+    outline: none;
+  }
+  &__box-tippy:focus &__box-span-svg {
+    opacity: 0.5;
+  }
+  &__guide-svg:active {
+    opacity: 0.5;
+  }
+  &__download-svg:active {
+    opacity: 0.5;
+  }
+  &__tbody-link:focus &__guide-svg {
+    opacity: 0.5;
+  }
+  &__tbody-link:focus &__download-svg {
+    opacity: 0.5;
+  }
+  &__tbody-link:focus {
+    outline: none;
+  }
+}

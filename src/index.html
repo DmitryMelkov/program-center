@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{ "title": "Главная" })
+
+<body class="body">
+  @@include('html/header.html',{ })
+  <main>
+    <section class="test">
+      <div class="container test__container">
+        <aside class="aside">
+          <div class="aside__item">
+            <button class="aside__item-btn btn-reset" type="button" data-tab="#dashboards">Дашборд
+              <svg class="aside__item-svg">
+                <use xlink:href="img/icons/icons.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="aside__item">
+            <button class="aside__item-btn btn-reset" type="button" data-tab="#orders">Мои заказы
+              <svg class="aside__item-svg">
+                <use xlink:href="img/icons/icons.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="aside__item">
+            <button class="aside__item-btn active btn-reset" type="button" data-tab="#programs">Мои программы
+              <svg class="aside__item-svg">
+                <use xlink:href="img/icons/icons.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="aside__item">
+            <button class="aside__item-btn btn-reset" type="button" data-tab="#study-center">Учебный центр
+              <svg class="aside__item-svg">
+                <use xlink:href="img/icons/icons.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="aside__item">
+            <button class="aside__item-btn btn-reset" type="button" data-tab="#token-request">Запрос токена
+              <svg class="aside__item-svg">
+                <use xlink:href="img/icons/icons.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="aside__item">
+            <button class="aside__item-btn btn-reset" type="button" data-tab="#technical-support">Техподдержка
+              <svg class="aside__item-svg">
+                <use xlink:href="img/icons/icons.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+
+        </aside>
+
+        <div class="dashboards tabs-item" id="dashboards">
+          <h2 class="dashboards__title title-reset">Мои дашборды</h2>
+        </div>
+        <div class="orders tabs-item" id="orders">
+          <h2 class="orders__title title-reset">Мои заказы</h2>
+        </div>
+        <div class="programs tabs-item active" id="programs">
+          <h2 class="programs__title title-reset">Мои программы</h2>
+          <div class="programs__search">
+            <input class="programs__search-input" type="search" placeholder="Введите название">
+            <svg class="programs__search-svg">
+              <use xlink:href="img/icons/icons.svg#search"></use>
+            </svg>
+          </div>
+          <table class="programs__table">
+            <thead class="programs__thead">
+              <tr class="programs__thead-tr">
+                <th class="programs__thead-th">Номер заказа</th>
+                <th class="programs__thead-th">Программа</th>
+                <th class="programs__thead-th">Действует до</th>
+                <th class="programs__thead-th">Скачать</th>
+                <th class="programs__thead-th">Руководство</th>
+                <th class="programs__thead-th">Статус</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="programs__tbody-tr">
+                <td class="programs__tbody-number">
+                  112192
+                  <button class="programs__content-tippy  btn-reset">
+                    <svg class="programs__content-tippy-svg">
+                      <use xlink:href="img/icons/icons.svg#marker"></use>
+                    </svg>
+                  </button>
+                </td>
+                <td class="programs__tbody-program"> (2) Детский сад: Питание</td>
+                <td class="programs__tbody-until active">08.09.2022</td>
+                <td>
+                  <a class="programs__tbody-link" href="#" download="@img/marker.svg">
+                    <svg class="programs__download-svg">
+                      <use xlink:href="img/icons/icons.svg#download"></use>
+                    </svg>
+                  </a>
+                </td>
+                <td>
+                  <a class="programs__tbody-link" href="#" download="@img/marker.svg">
+                    <svg class="programs__guide-svg">
+                      <use xlink:href="img/icons/icons.svg#guide"></use>
+                    </svg>
+                  </a>
+                </td>
+                <td>
+                  <div class="programs__tbody-btns">
+                    <span class="programs__active-btn">
+                      Активировано
+                    </span>
+                    <span class="programs__notactive-btn">
+                      Не активировано
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="programs__tbody-tr">
+                <td class="programs__tbody-number">112192</td>
+                <td class="programs__tbody-program"> (2) Детский сад: Питание</td>
+                <td class="programs__tbody-until">08.09.2022</td>
+                <td>
+                  <a class="programs__tbody-link" href="#" download="@img/marker.svg">
+                    <svg class="programs__download-svg">
+                      <use xlink:href="img/icons/icons.svg#download"></use>
+                    </svg>
+                  </a>
+                </td>
+                <td>
+                  <a class="programs__tbody-link" href="#" download="@img/marker.svg">
+                    <svg class="programs__guide-svg">
+                      <use xlink:href="img/icons/icons.svg#guide"></use>
+                    </svg>
+                  </a>
+                </td>
+                <td>
+                  <div class="programs__tbody-btns">
+                    <span class="programs__active-btn">
+                      Активировано
+                    </span>
+                    <span class="programs__notactive-btn">
+                      Не активировано
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="programs__tbody-tr">
+                <td class="programs__tbody-number">112192</td>
+                <td class="programs__tbody-program"> (2) Детский сад: Питание</td>
+                <td class="programs__tbody-until">08.09.2022</td>
+                <td>
+                  <a class="programs__tbody-link" href="#" download="@img/marker.svg">
+                    <svg class="programs__download-svg">
+                      <use xlink:href="img/icons/icons.svg#download"></use>
+                    </svg>
+                  </a>
+                </td>
+                <td>
+                  <a class="programs__tbody-link" href="#" download="@img/marker.svg">
+                    <svg class="programs__guide-svg">
+                      <use xlink:href="img/icons/icons.svg#guide"></use>
+                    </svg>
+                  </a>
+                </td>
+                <td>
+                  <div class="programs__tbody-btns">
+                    <span class="programs__active-btn">
+                      Активировано
+                    </span>
+                    <span class="programs__notactive-btn">
+                      Не активировано
+                    </span>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <div class="programs__activation">
+            <div class="programs__activation-top">
+              <div class="programs__activation-title-cocntent">
+                <h3 class="programs__activation-title title-reset">Доступно к активации:</h3>
+                <span class="programs__activation-span">3</span>
+              </div>
+              <p class="programs__activation-descr descr-reset">Запросите код и активируйте программу</p>
+              <button class="programs__activation-btn btn-reset">Запросить код</button>
+            </div>
+            <div class="programs__activation-box">
+              <div class="programs__box-left">
+                <div class="programs__box-spans">
+                  <span class="programs__box-span-left">Дата активации:</span>
+                  <span class="programs__box-span-right">2022-09-15 13:54:59</span>
+                </div>
+                <div class="programs__box-spans">
+                  <span class="programs__box-span-left">Наименование компьютера: </span>
+                  <span class="programs__box-span-right">HOME-PC</span>
+                  <button class="programs__box-tippy  btn-reset">
+                    <svg class="programs__box-span-svg">
+                      <use xlink:href="img/icons/icons.svg#tippy"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="programs__box-spans">
+                  <span class="programs__box-span-left">Комментарий: </span>
+                  <span class="programs__box-span-right"> Хочу перенести программу</span>
+                </div>
+              </div>
+              <div class="programs__box-right">
+                <button class="programs__box-right-btn btn-reset">Деактивировать</button>
+              </div>
+            </div>
+            <div class="programs__activation-box">
+              <div class="programs__box-left">
+                <div class="programs__box-spans">
+                  <span class="programs__box-span-left">Дата активации:</span>
+                  <span class="programs__box-span-right">2022-09-15 13:54:59</span>
+                </div>
+                <div class="programs__box-spans">
+                  <span class="programs__box-span-left">Наименование компьютера: </span>
+                  <span class="programs__box-span-right">HOME-PC</span>
+                  <button class="programs__box-tippy  btn-reset">
+                    <svg class="programs__box-span-svg">
+                      <use xlink:href="img/icons/icons.svg#tippy"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="programs__box-spans">
+                  <span class="programs__box-span-left">Комментарий: </span>
+                  <span class="programs__box-span-right"> Хочу перенести программу</span>
+                </div>
+              </div>
+              <div class="programs__box-right">
+                <button class="programs__box-right-btn btn-reset">Деактивировать</button>
+              </div>
+            </div>
+
+
+          </div>
+          <table class="programs__table">
+            <tbody>
+              <tr class="programs__tbody-tr">
+                <td class="programs__tbody-number">
+                  112192
+
+                </td>
+                <td class="programs__tbody-program"> (2) Детский сад: Питание</td>
+                <td class="programs__tbody-until">08.09.2022</td>
+                <td>
+                  <a class="programs__tbody-link" href="#" download="@img/marker.svg">
+                    <svg class="programs__download-svg">
+                      <use xlink:href="img/icons/icons.svg#download"></use>
+                    </svg>
+                  </a>
+                </td>
+                <td>
+                  <a class="programs__tbody-link" href="#" download="@img/marker.svg">
+                    <svg class="programs__guide-svg">
+                      <use xlink:href="img/icons/icons.svg#guide"></use>
+                    </svg>
+                  </a>
+                </td>
+                <td>
+                  <div class="programs__tbody-btns">
+                    <span class="programs__active-btn">
+                      Активировано
+                    </span>
+                    <span class="programs__notactive-btn">
+                      Не активировано
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="programs__tbody-tr">
+                <td class="programs__tbody-number">
+                  112192
+                  <button class="programs__content-tippy  btn-reset">
+                    <svg class="programs__content-tippy-svg">
+                      <use xlink:href="img/icons/icons.svg#marker"></use>
+                    </svg>
+                  </button>
+                </td>
+                <td class="programs__tbody-program"> (2) Детский сад: Питание</td>
+                <td class="programs__tbody-until active">08.09.2022</td>
+                <td>
+                  <a class="programs__tbody-link" href="#" download="@img/marker.svg">
+                    <svg class="programs__download-svg">
+                      <use xlink:href="img/icons/icons.svg#download"></use>
+                    </svg>
+                  </a>
+                </td>
+                <td>
+                  <a class="programs__tbody-link" href="#" download="@img/marker.svg">
+                    <svg class="programs__guide-svg">
+                      <use xlink:href="img/icons/icons.svg#guide"></use>
+                    </svg>
+                  </a>
+                </td>
+                <td>
+                  <div class="programs__tbody-btns">
+                    <span class="programs__active-btn">
+                      Активировано
+                    </span>
+                    <span class="programs__notactive-btn">
+                      Не активировано
+                    </span>
+                  </div>
+                </td>
+              </tr>
+              <tr class="programs__tbody-tr">
+                <td class="programs__tbody-number">112192</td>
+                <td class="programs__tbody-program"> (2) Детский сад: Питание</td>
+                <td class="programs__tbody-until">08.09.2022</td>
+                <td>
+                  <a class="programs__tbody-link" href="#" download="@img/marker.svg">
+                    <svg class="programs__download-svg">
+                      <use xlink:href="img/icons/icons.svg#download"></use>
+                    </svg>
+                  </a>
+                </td>
+                <td>
+                  <a class="programs__tbody-link" href="#" download="@img/marker.svg">
+                    <svg class="programs__guide-svg">
+                      <use xlink:href="img/icons/icons.svg#guide"></use>
+                    </svg>
+                  </a>
+                </td>
+                <td>
+                  <div class="programs__tbody-btns">
+                    <span class="programs__active-btn">
+                      Активировано
+                    </span>
+                    <span class="programs__notactive-btn">
+                      Не активировано
+                    </span>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+        <div class="study-center tabs-item" id="study-center">
+          <h2 class="study-center__title title-reset">Учебный центр</h2>
+        </div>
+        <div class="token-request tabs-item" id="token-request">
+          <h2 class="token-request__title title-reset">Запрос Токена</h2>
+        </div>
+        <div class="technical-support tabs-item" id="technical-support">
+          <h2 class="technical-support__title title-reset">Техподдержка</h2>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  @@include('html/footer.html',{ })
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>
